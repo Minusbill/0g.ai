@@ -224,6 +224,8 @@ read -p "请输入你想导入的EVM钱包私钥，不要有0x: " minerkey
 
 sed -i "s/miner_key = \"\"/miner_key = \"$minerkey\"/" config.toml
 
+sed -i 's|blockchain_rpc_endpoint = ".*"|blockchain_rpc_endpoint = "https://0g-testnet-jsonrpc.ibs.team"|' config.toml
+
 screen -dmS zgs_node_session ../target/release/zgs_node --config config.toml
 
 echo '====================== 安装完成 ==========================='
