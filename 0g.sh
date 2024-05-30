@@ -248,10 +248,6 @@ cargo build --release
 #后台运行
 cd run
 
-echo "请输入RPC节点信息: "
-read blockchain_rpc_endpoint
-
-
 cat > config.toml <<EOF
 stream_ids = ["000000000000000000000000000000000000000000000000000000000000f2bd", "000000000000000000000000000000000000000000000000000000000000f009", "00000000000000000000000000"]
 
@@ -264,7 +260,7 @@ zgs_node_urls = "http://127.0.0.1:5678"
 
 log_config_file = "log_config"
 
-blockchain_rpc_endpoint = "$blockchain_rpc_endpoint"
+blockchain_rpc_endpoint = "https://0g-testnet-jsonrpc.ibs.team"
 log_contract_address = "0x22C1CaF8cbb671F220789184fda68BfD7eaA2eE1"
 log_sync_start_block_number = 670000
 
